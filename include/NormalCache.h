@@ -80,7 +80,7 @@ private:
 
   // GC
   tbb::concurrent_queue<CacheEntry*> cache_entry_gc;
-  static const int safely_free_epoch = 2 * MAX_APP_THREAD * MAX_CORO_NUM;
+  static const int safely_free_epoch = 1024 * MAX_APP_THREAD * MAX_CORO_NUM;
 
   // Eviction
   DSM *dsm;

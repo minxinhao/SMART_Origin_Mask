@@ -46,10 +46,12 @@ pip3 install matplotlib
 # tbb
 git clone https://github.com/wjakob/tbb.git
 cd tbb/build
+export CC=gcc-9
+export CXX=g++-9
 cmake ..
 make -j
 sudo make install
-ldconfig
+sudo ldconfig
 cd ../..
 
 # openjdk-8
